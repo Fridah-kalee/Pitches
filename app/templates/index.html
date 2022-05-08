@@ -1,6 +1,9 @@
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+
 <title>{{ title }}</title>
-<h1>hello</h1>
+<div class="container" style="font-family: 'Cormorant Upright', serif;">
+<div class="row">
 <div class="col-md-4" style="text-align: center;">
     <div class="well well-lg">
         <h3>Products Pitches</h3>
@@ -9,4 +12,24 @@
             they're facing. </p>
         <a href="{{url_for('main.product_pitches')}}" class="btn btn-info -center">Click to view</a>
     </div>
+</div>
+<div class="col-md-4">
+    <div class="well well-lg" style="text-align: center;">
+        <h3>Interviews Pitches</h3>
+        <hr>
+        <p>Essentially it’s a short summary about yourself and what you do, in an interview. </p>
+            <a href="{{url_for('main.interview_pitches')}}" class="btn btn-info btn-center -center">Click to
+            view</a>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="well well-lg" style="text-align: center;">
+        <h3>Promotion Pitches</h3>
+        <hr>
+        <p>A sales pitch is a condensed sales presentation,a salesperson explains the nature and
+            benefits of their business in less than one or two minutes.</p>
+        <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-info -center">Click to view</a>
+    </div>
+</div>
+</div>
 </div>
