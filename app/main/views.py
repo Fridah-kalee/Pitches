@@ -20,3 +20,10 @@ def index():
 
     return render_template('index.html',title=title,interview=interview_pitches,product=product_pitches,promotion=promotion_pitches)
 
+@main.route('/pitches/product_pitches')
+def product_pitches():
+
+    pitches = Pitch.get_pitches('product')
+
+    return render_template("product_pitches.html", pitches = pitches)    
+
