@@ -1,12 +1,12 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,TextAreaField,SubmitField
+from wtforms import StringField,TextAreaField,SelectField,SubmitField
 from wtforms.validators import InputRequired
 
 class PitchForm(FlaskForm):
 
-    title = StringField('Review title',validators=[InputRequired()])
-    text = TextAreaField('Movie review', validators=[InputRequired()])
-    category = SelectField('Type',choices=[('interview','Interview pitch'),('product','Product pitch'),('promotion','Promotion pitch')],validators=[Required()])
+    title = StringField('Pitch title',validators=[InputRequired()])
+    text = TextAreaField('Pitch content', validators=[InputRequired()])
+    category = SelectField('Type',choices=[('interview','Interview pitch'),('product','Product pitch'),('promotion','Promotion pitch')],validators=[InputRequired()])
     submit = SubmitField('Submit')
 
 class UpdateProfile(FlaskForm):

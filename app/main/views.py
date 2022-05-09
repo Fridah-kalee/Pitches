@@ -1,6 +1,7 @@
-from flask import render_template
+from flask import render_template,url_for
 from . import main
 from ..models import Pitch
+from .forms import PitchForm
 
 
 @main.route('/')
@@ -19,6 +20,25 @@ def index():
     title='Welcome to pitches website'
 
     return render_template('index.html',title=title,interview=interview_pitches,product=product_pitches,promotion=promotion_pitches)
+
+@main.route('/pitch/new',methods =['GET','POST'])
+def new_pitch():
+    form = PitchForm()
+
+    if form.validate_on_submit():
+        title = pitch_form.title.data
+        pitch = pitch_form.text.data
+        category = pitch_form.category.data
+
+        new_pitch=Pitch(pitch_title=title,pitch_content=content,pitch_category=category)
+
+        new_pitch.save_pitch()
+        return redirect(url_for('.index'))
+
+    title='New Pitch'
+    return render_template('new_pitch.html',title=title,pitch_form=form)
+
+
 
 @main.route('/pitches/product_pitches')
 def product_pitches():

@@ -11,9 +11,9 @@
 <title>{{ title }}</title>
 <div class="container" style="font-family: 'Cormorant Upright', serif;">
 <div class="row">
-<div class="col-md-12" style="text-align: center;">
+<div class="col-md-4" style="text-align: center;">
     <div class="well well-lg">
-        <h3 style="color: hotpink;"><b>Products Pitches</b></h3>
+        <h3 style="color: orangered;"><b>Products Pitches</b></h3>
         <hr>
         <p>Make it short. · Make it clear. · Explain who your customers are. · Explain the problem
             they're facing. </p>
@@ -23,9 +23,9 @@
         <a href="{{url_for('main.product_pitches')}}" class="btn btn-info -center" style="margin-top: 2%;">Click to view</a>
     </div>
 </div>
-<div class="col-md-12">
+<div class="col-md-4">
     <div class="well well-lg" style="text-align: center;">
-        <h3 style="color: hotpink;"><b>Interviews Pitches</b></h3>
+        <h3 style="color: orangered;"><b>Interviews Pitches</b></h3>
         <hr>
         <p>Essentially it’s a short summary about yourself and what you do, in an interview. </p>
         <button><a href=""><i class="fa fa-thumbs-up" style="font-size: 17px;color: blue;"></i></a></button>
@@ -35,12 +35,11 @@
         view</a>
     </div>
 </div>
-<div class="col-md-12">
+<div class="col-md-4">
     <div class="well well-lg" style="text-align: center;">
-        <h3 style="color: hotpink;"><b>Promotion Pitches</b></h3>
+        <h3 style="color: orangered;"><b>Promotion Pitches</b></h3>
         <hr>
-        <p>A sales pitch is a condensed sales presentation,a salesperson explains the nature and
-            benefits of their business in less than one or two minutes.</p>
+        <p>A sales pitch is a condensed sales presentation,a salesperson explains the nature and</p>
         <button><a href=""><i class="fa fa-thumbs-up" style="font-size: 17px;color: blue;"></i></a></button>
         <button><a href=""><i class="fa fa-thumbs-down" style="font-size: 17px;color: red;"></i></a></button>
         <br>
@@ -48,5 +47,8 @@
     </div>
 </div>
 </div>
+</div>
+<div style="padding-bottom: 20px; text-align: center;">
+    <a href="{{url_for('main.new_pitch')}}" class="btn btn-info btn-center">Click to create a pitch</a>
 </div>
 {%endblock%}
