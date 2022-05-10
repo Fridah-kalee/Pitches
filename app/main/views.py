@@ -2,6 +2,7 @@ from flask import render_template,url_for
 from . import main
 from ..models import Pitch
 from .forms import PitchForm
+from flask_login import login_required
 
 
 @main.route('/')
@@ -22,6 +23,7 @@ def index():
     return render_template('index.html',title=title,interview=interview_pitches,product=product_pitches,promotion=promotion_pitches)
 
 @main.route('/pitch/new',methods =['GET','POST'])
+@login_required
 def new_pitch():
     form = PitchForm()
 
