@@ -13,10 +13,7 @@
             <div class="col-md-5">
                     {{wtf.quick_form(form)}}
             </div>
-                
-                
-
-            {% if all_comments %}
+                {% if all_comments %}
                 <div class="col-md-7" >
                     <h3 class="text-center" id="coms">All comments for the post</h3>
                     {% for comment in all_comments %}
@@ -24,7 +21,6 @@
                            <div class="card-body">
                             <h5>{{comment.pitch.title}}</h5>
                              <p class="card-title">{{ comment.comment }}</p>
-                           
                            </div>
                        </div>
                     {% endfor %}
