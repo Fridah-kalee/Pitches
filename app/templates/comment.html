@@ -4,6 +4,17 @@
 {% block content %}
     <div class="container" id="allcomments" >
         <div class="row">
+            
+            <div class="card w-90 mb-3">
+                <div class="card-body">
+                  <p class="card-title"><b>Comment here.</b></p>
+                </div>
+            </div> 
+            <div class="col-md-5">
+                    {{wtf.quick_form(form)}}
+            </div>
+                
+                
 
             {% if all_comments %}
                 <div class="col-md-7" >
@@ -13,27 +24,16 @@
                            <div class="card-body">
                             <h5>{{comment.pitch.title}}</h5>
                              <p class="card-title">{{ comment.comment }}</p>
-                             <p class="card-text">--- {{comment.user.username}}</p>
+                           
                            </div>
                        </div>
                     {% endfor %}
-                   </div>
-                   <div class="col-md-5  commentform" >
-
-                        {{wtf.quick_form(form)}}
-                   </div>
-               </div>
+                </div>
+                   
             {%else%}
-            <div class="card w-90 mb-3">
-                <div class="card-body">
-                  <p class="card-title">Be the first to comment</p>
-                </div>
-            </div> 
-            <div class="col-md-5">
-                    {{wtf.quick_form(form)}}
-                </div>
+            
             {%endif%}
-    </div>
-   
+        </div>
+   </div>  
 {% endblock%}
 

@@ -92,7 +92,7 @@ class Upvote(db.Model):
 
     @classmethod
     def get_upvotes(cls,id):
-        upvotes = Pitch.query.filter_by(pitch_id=id).all()
+        upvotes = cls.query.filter_by(pitch_id=id).all()
         return upvotes
 
     def __repr__(self):
@@ -111,7 +111,7 @@ class Downvote(db.Model):
 
     @classmethod
     def get_downvotes(cls,id):
-        downvotes = Pitch.query.filter_by(pitch_id=id).all()
+        downvotes =cls.query.filter_by(pitch_id=id).all()
         return downvotes
 
     def __repr__(self):
