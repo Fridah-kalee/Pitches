@@ -3,13 +3,15 @@
 
 {% block styles%}
     {{ super() }}
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 {% endblock %}
-
-{%block content%}
 <title>{{ title }}</title>
-<div class="container" style="font-family: 'Cormorant Upright', serif;">
+{% block content %}
+
+
+<div class="container">
 <div class="row" style="margin-top: 4%;">
 <div class="col-md-4" style="text-align: center;">
     <div class="well well-lg">

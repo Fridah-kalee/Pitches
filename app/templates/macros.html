@@ -4,8 +4,8 @@
             <div class="well well-lg">
                 <h4>{{pitch.pitch_title}}</h4>
                 <p>{{pitch.pitch_content}}</p>
-            <button><a href="{{url_for("main.upvote",id=pitch.id)}}"><i class="fa fa-thumbs-up" style="font-size: 20px;color: blue;"></i>{{pitch.upvote.count()}}</a></button>
-            <button><a href="{{url_for("main.downvote",id=pitch.id)}}"><i class="fa fa-thumbs-down" style="font-size: 20px;color: red;"></i>{{pitch.downvote.count()}}</a></button>
+            <button><a href="{{url_for("main.upvote",id=pitch.id)}}"><i class="fa fa-thumbs-up" style="font-size: 14px;color: green;">Upvote : </i>{{ pitch.upvote.count() }}</a></button>
+            <button><a href="{{url_for("main.downvote",id=pitch.id)}}"><i class="fa fa-thumbs-down" style="font-size: 14px;color: rgb(223, 23, 249);">Downvote : </i>{{ pitch.downvote.count() }}</a></button>
             <button><a href="{{url_for("main.comment",pitch_id=pitch.id)}}">Comment</a></button>
 
             </div>

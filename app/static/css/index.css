@@ -1,4 +1,6 @@
 body{
-    overflow-x: hidden;
-    
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3xnLc0Xhszk0o5n4SddEnwc68Fnl1hTJulw&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
 }

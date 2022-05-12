@@ -30,7 +30,7 @@ def new_pitch():
         pitch = pitch_form.text.data
         category = pitch_form.category.data
 
-        new_pitch=Pitch(pitch_title=title,category=category,user=current_user)
+        new_pitch=Pitch(pitch_title=title,pitch_content=pitch,category=category,user=current_user)
 
         new_pitch.save_pitch()
         return redirect(url_for('.index'))
