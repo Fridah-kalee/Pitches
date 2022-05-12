@@ -7,7 +7,7 @@
   <div class="col-md-4">
 
     {% if user.profile_pic_path %}
-    <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+    <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail" style="margin-bottom: 4%;" >
     {%else%}
     <p>No profile picture</p>
     {% endif %}
@@ -16,9 +16,9 @@
     <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
 
         <input type="file"  name="photo" class="form-control" required>
-        <input type="submit">
+        <button type="submit" style="margin: 3%;">submit</button>
     </form>
-    <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+    
 {% endif %}
   </div>
 <!-- displaying  Username-->
@@ -31,6 +31,7 @@
     {%else%}
       <p> {{user.username| capitalize}} has no bio </p>
     {% endif %}
+    <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
   </div>
 
   </div>
