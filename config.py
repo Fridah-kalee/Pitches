@@ -18,8 +18,8 @@ class ProdConfig(Config):
     Args:
     Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://oytwsfvqjadzgf:74e4dd3c6e4d7fd980643b681d9145baf3b98611eafcd639a33d8941229f67ab@ec2-3-217-113-25.compute-1.amazonaws.com:5432/d89nv1bn48c0fa'
-    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://oytwsfvqjadzgf:74e4dd3c6e4d7fd980643b681d9145baf3b98611eafcd639a33d8941229f67ab@ec2-3-217-113-25.compute-1.amazonaws.com:5432/d89nv1bn48c0fa'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql://"),1
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:kalee@localhost/pitches_test'
